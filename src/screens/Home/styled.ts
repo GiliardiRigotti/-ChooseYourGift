@@ -16,6 +16,8 @@ export const Wrapper = styled.View`
 `
 
 export const Title = styled.Text`
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
+    margin-top: 10px;
+    color:whitesmoke
 `

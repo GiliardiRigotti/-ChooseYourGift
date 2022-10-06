@@ -3,8 +3,10 @@ import React, { useEffect } from "react";
 import { Animated, TouchableOpacity } from "react-native";
 import { images } from "../../assets";
 
-
-export function GiftBox() {
+interface GiftBoxProps {
+    index: number
+}
+export function GiftBox({ index }: GiftBoxProps) {
     const aninValue = new Animated.Value(1)
     const navigation = useNavigation();
 
@@ -26,7 +28,7 @@ export function GiftBox() {
     }, [aninValue]);
 
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('OpenGift')}>
+        <TouchableOpacity onPress={() => navigation.navigate('OpenGift', { index: index })}>
             <Animated.Image source={images.gift} style={{ width: 300, height: 300, transform: [{ scale: aninValue }] }} resizeMode='contain' />
         </TouchableOpacity>
     )

@@ -7,13 +7,13 @@ import { GiftBox } from "../../components/GiftBox";
 export function Home() {
     return (
         <Container>
-            <StatusBar hideTransitionAnimation="fade" />
+            <StatusBar style='light' />
             <Title>
                 Escolha seu presente
             </Title>
             <Wrapper>
-                <GiftBox />
-                <GiftBox />
+                <GiftBox index={0} />
+                <GiftBox index={1} />
             </Wrapper>
         </Container>
     );
